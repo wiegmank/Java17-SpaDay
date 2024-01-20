@@ -17,12 +17,13 @@
 </div>
 
 <div id = "servicesMenu">
-    <h3>Menu of Available Services</h3>
+    <h2>Menu of Available Services</h2>
 
 
 <table>
 
-    <th>Facial Treatments</th>
+    <h3>Facial Treatments</h3>
+    <p>The facial treatments are recommended based on your skin type.</p>
 
         <th:block th:each="facial : ${appropriateFacials}">
             <tr>
@@ -40,7 +41,14 @@
         <h3>Pedicure</h3>
         <p th:replace="fragments :: pedicureDescription"></p>
     </div>
+    <div th:if="${manipedi} == manipedi">
+        <h3>Manicure</h3>
+        <p th:replace="fragments :: manicureDescription"></p>
+        <h3>Pedicure</h3>
+        <p th:replace="fragments :: pedicureDescription"></p>
+    </div>
 
 </div>
 </body>
+<footer th:replace="fragments :: footer"></footer>
 </html>
