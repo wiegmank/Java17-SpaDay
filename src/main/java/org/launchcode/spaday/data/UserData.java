@@ -7,17 +7,17 @@ import java.util.List;
 
 public class UserData {
 
-    List<User> allUsers = new ArrayList<>();
+    private static final List<User> allUsers = new ArrayList<>();
 
-    public void add(User user){
+    public static void add(User user){
         allUsers.add(user);
     }
 
-    public List<User> getAll() {
+    public static List<User> getAll() {
         return allUsers;
     }
 
-    public User getById(int id){
+    public static User getById(int id){
         for(User user : allUsers) {
             if(user.getId() == id) {
                 return user;
