@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spa Day</title>
+</head>
+<body>
+
+<form method="post" action="/user">
+    <div th:text="${error}" th:if="${error}">
+
+    </div>
+    <div class="form-group">
+        <label> Username
+            <input type="text" th:value="${username}" name="username" class="form-control">
+        </label>
+        <label> Email
+            <input type="email" th:value="${email}" name="email" class="form-control">
+        </label>
+        <label> Password
+            <input type="password" name="password" class="form-control">
+        </label>
+        <label> Re-type Password
+            <input type="password" name="verify" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
+
+</body>
+</html>
